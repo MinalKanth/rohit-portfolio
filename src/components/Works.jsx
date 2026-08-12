@@ -1,4 +1,4 @@
-import Tilt from "react-tilt";
+// import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -26,18 +26,15 @@ const ProjectCard = ({
       {/* Outer glow */}
       <div className="absolute -inset-[1px] rounded-[24px] bg-gradient-to-r from-accent/0 via-accent/20 to-violet-500/0 opacity-0 blur-sm transition-all duration-700 group-hover:opacity-100" />
 
-      <Tilt
-        options={{
-          max: 15,
-          scale: 1.025,
-          speed: 500,
-          transition: true,
-          axis: null,
-          reset: true,
-          easing: "cubic-bezier(.03,.98,.52,.99)",
-        }}
-        className="relative z-10 sm:w-[360px] w-full"
-      >
+      <div
+  className="
+    relative z-10 sm:w-[360px] w-full
+    transition-transform duration-500 ease-out
+    [transform-style:preserve-3d]
+    group-hover:-translate-y-1
+    group-hover:scale-[1.015]
+  "
+>
         <div
           className="
             relative overflow-hidden rounded-[24px]
@@ -182,7 +179,7 @@ const ProjectCard = ({
           {/* Bottom glow */}
           <div className="pointer-events-none absolute bottom-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };
