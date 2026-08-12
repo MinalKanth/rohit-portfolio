@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import appstore from "./appstore.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -54,6 +55,7 @@ const buzzy = "/src/assets/buzzy.png";
 
 export {
   logo,
+  appstore,
   backend,
   creator,
   mobile,
