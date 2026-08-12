@@ -1,4 +1,12 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
+import React from "react";
+
+import {
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+} from "./canvas";
+
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -10,20 +18,34 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import CanvasLoader from "./Loader";
 
+/*
+|--------------------------------------------------------------------------
+| Premium Component Barrel
+|--------------------------------------------------------------------------
+| Centralized exports for all portfolio sections and 3D experiences.
+| Keeping this file clean makes it easier to scale the portfolio later.
+*/
 
 export {
-  Hero,
+  // Layout
   Navbar,
+  Footer,
+
+  // Main sections
+  Hero,
   About,
   Tech,
   Experience,
   Works,
   Feedbacks,
   Contact,
-  Footer,
+
+  // 3D experiences
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+
+  // Shared UI
   CanvasLoader,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
-  StarsCanvas
 };

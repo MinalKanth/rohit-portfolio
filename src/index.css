@@ -273,3 +273,69 @@ body {
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+
+
+/* Premium Experience Timeline */
+
+.experience-date {
+  color: #8b8b96 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em;
+}
+
+.vertical-timeline::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(79, 127, 255, 0.05),
+    rgba(79, 127, 255, 0.45),
+    rgba(79, 127, 255, 0.05)
+  ) !important;
+  width: 1px !important;
+}
+
+.vertical-timeline-element-icon {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease !important;
+}
+
+.vertical-timeline-element:hover
+  .vertical-timeline-element-icon {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 0 4px #4f7fff,
+    0 0 45px rgba(79, 127, 255, 0.55) !important;
+}
+
+.vertical-timeline-element-content {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 1169px) {
+  .experience-date {
+    color: #8b8b96 !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vertical-timeline::before {
+    left: 18px !important;
+  }
+
+  .vertical-timeline-element-icon {
+    left: 0 !important;
+  }
+
+  .vertical-timeline-element-content {
+    margin-left: 60px !important;
+  }
+
+  .experience-date {
+    text-align: left !important;
+    margin-left: 60px !important;
+  }
+}

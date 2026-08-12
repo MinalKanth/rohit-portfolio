@@ -17,7 +17,7 @@ const socials = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto overflow-hidden">
+    <section className="relative w-full min-h-screen mx-auto overflow-hidden">
       {/* Ambient system: fine grid + radial glow + drifting orbs */}
       <div className="pointer-events-none absolute inset-0 bg-grid" />
       <div className="pointer-events-none absolute inset-0 bg-radial-glow" />
@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute bottom-0 -right-24 w-[380px] h-[380px] rounded-full bg-accent-violet/10 blur-[130px] animate-drift" style={{ animationDelay: "3s" }} />
 
       <div
-        className={`absolute inset-0 top-[150px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-start`}
+        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-[115px] pb-24 flex flex-col items-start`}
       >
         <motion.div
           initial={{ opacity: 0, y: -8 }}
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className={`${styles.heroHeadText} mt-6`}
+          className={`${styles.heroHeadText} mt-5 max-w-[900px]`}
         >
           iOS Developer,
           <br />
@@ -52,7 +52,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className={`${styles.heroSubText} mt-6`}
+          className="mt-5 text-secondary text-[17px] sm:text-[18px] leading-[28px] sm:leading-[30px] max-w-[620px]"
         >
           I design and ship Swift apps with real-time video, chat, AI, and
           payments — from first line of code to App Store release.
@@ -95,7 +95,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-16 flex flex-wrap gap-x-12 gap-y-4 border-t border-line pt-8 w-full max-w-xl"
+          className="mt-12 flex flex-wrap gap-x-10 gap-y-5 border-t border-line pt-6 w-full max-w-[650px]"
         >
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col">
@@ -110,7 +110,9 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <ComputersCanvas />
+      <div className="absolute inset-y-0 right-0 w-[52%] z-0 pointer-events-none">
+        <ComputersCanvas />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
