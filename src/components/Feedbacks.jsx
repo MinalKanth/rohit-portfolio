@@ -80,7 +80,7 @@ const FeedbackCard = ({ index, testimonial }) => {
           animate={{
             opacity: isHovered ? 0.35 : 0.15,
           }}
-          className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-[#915eff] blur-3xl"
+          className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-[#4F7FFF] blur-3xl"
           style={{
             transform: "translateZ(-20px)",
           }}
@@ -139,7 +139,7 @@ const FeedbackCard = ({ index, testimonial }) => {
                 justify-center
                 rounded-full
                 bg-gradient-to-br
-                from-[#915eff]
+                from-[#4F7FFF]
                 to-[#6d28d9]
                 text-sm
                 font-bold

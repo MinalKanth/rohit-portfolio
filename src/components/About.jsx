@@ -1,4 +1,3 @@
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -6,18 +5,21 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
+const stats = [
+  { value: "4+", label: "Years of experience" },
+  { value: "11+", label: "Apps shipped" },
+  { value: "20+", label: "Technologies used" },
+  { value: "1", label: "Production healthcare client" },
+];
+
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full p-[1px] rounded-[20px] shadow-card bg-gradient-to-br from-[#FA7343] via-[#2DD4BF] to-transparent"
-    >
-      <div className="bg-tertiary/90 backdrop-blur-sm rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_-15px_rgba(250,115,67,0.4)]">
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-      </div>
-    </motion.div>
-  </Tilt>
+  <motion.div
+    variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+    className="surface rounded-2xl p-8 flex flex-col gap-6 transition-colors duration-300 hover:border-accent/40"
+  >
+    <img src={icon} alt={title} className="w-10 h-10 object-contain opacity-90" />
+    <h3 className="text-white-100 text-[17px] font-semibold tracking-tight">{title}</h3>
+  </motion.div>
 );
 
 const About = () => {
@@ -25,27 +27,55 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>
-          Overview<span className="text-[#FA7343]">.</span>
-        </h2>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a dynamic, detail-oriented iOS Developer with 4+ years of experience
-        building robust, user-friendly mobile applications in Swift and
-        Objective-C. I've shipped 11+ apps across telehealth, AI, social/live
-        streaming, and fintech-adjacent domains — from real-time video
-        consultations to live broadcasting platforms — with a proven track
-        record of delivering on time without compromising code quality. I'm
-        currently working directly with a US-based healthcare client,
-        maintaining and enhancing their production iOS applications for
-        clinicians and patients.
-      </motion.p>
+      <div className="mt-6 grid lg:grid-cols-3 gap-10 items-start">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="lg:col-span-2 text-secondary text-[16px] leading-[28px]"
+        >
+          I'm a dynamic, detail-oriented iOS Developer with 4+ years of
+          experience building robust, user-friendly mobile applications in
+          Swift and Objective-C. I've shipped 11+ apps across telehealth, AI,
+          social/live streaming, and fintech-adjacent domains — from
+          real-time video consultations to live broadcasting platforms —
+          with a proven track record of delivering on time without
+          compromising code quality. I'm currently working directly with a
+          US-based healthcare client, maintaining and enhancing their
+          production iOS applications for clinicians and patients.
+        </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+        <motion.div
+          variants={fadeIn("left", "spring", 0.2, 1)}
+          className="surface rounded-2xl p-6"
+        >
+          <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-semibold mb-5">
+            Philosophy
+          </p>
+          <p className="text-white-100 text-[15px] leading-[24px]">
+            Ship products that feel inevitable — fast, stable, and quietly
+            well-engineered under the hood.
+          </p>
+        </motion.div>
+      </div>
+
+      <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 border-y border-line py-10">
+        {stats.map((stat, i) => (
+          <motion.div
+            key={stat.label}
+            variants={fadeIn("up", "spring", i * 0.1, 0.6)}
+            className="flex flex-col"
+          >
+            <span className="text-white-100 font-display font-bold text-[32px] leading-none">
+              {stat.value}
+            </span>
+            <span className="mt-2 text-secondary text-[13px]">{stat.label}</span>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

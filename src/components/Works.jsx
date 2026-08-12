@@ -18,20 +18,20 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{ max: 25, scale: 1.02, speed: 450 }}
-        className="bg-tertiary/90 backdrop-blur-sm p-5 rounded-2xl sm:w-[360px] w-full border border-white/5 transition-shadow duration-300 hover:shadow-[0_25px_60px_-20px_rgba(250,115,67,0.45)]"
+        options={{ max: 12, scale: 1.01, speed: 450 }}
+        className="surface p-5 rounded-2xl sm:w-[360px] w-full transition-colors duration-300 hover:border-accent/40"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[230px] overflow-hidden rounded-xl">
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="bg-black/70 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-white/10 hover:border-[#FA7343] transition-colors"
+              className="bg-black-200/80 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-line hover:border-accent transition-colors"
             >
               <img
                 src={appstore}
@@ -43,7 +43,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[22px]">{name}</h3>
+          <h3 className="text-white-100 font-semibold text-[19px] tracking-tight">{name}</h3>
           <p className="mt-2 text-secondary text-[14px] leading-[22px]">
             {description}
           </p>
@@ -51,7 +51,7 @@ const ProjectCard = ({
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={`${name}-${tag.name}`} className={`text-[13px] ${tag.color}`}>
+            <p key={`${name}-${tag.name}`} className={`text-[12px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -67,7 +67,7 @@ const Works = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Shipped to the App Store</p>
         <h2 className={styles.sectionHeadText}>
-          My Apps<span className="text-[#FA7343]">.</span>
+          My Apps<span className="text-[#4F7FFF]">.</span>
         </h2>
       </motion.div>
 

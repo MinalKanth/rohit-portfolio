@@ -14,15 +14,15 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#1C1A1F",
-      color: "#fff",
-      boxShadow: "0 20px 50px -20px rgba(250, 115, 67, 0.35)",
-      border: "1px solid rgba(255,255,255,0.06)",
+      background: "#101014",
+      color: "#F5F5F7",
+      boxShadow: "0 20px 50px -20px rgba(79,127,255, 0.25)",
+      border: "1px solid #25252C",
     }}
-    contentArrowStyle={{ borderRight: "7px solid #1C1A1F" }}
+    contentArrowStyle={{ borderRight: "7px solid #101014" }}
     date={experience.date}
     dateClassName="text-secondary"
-    iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #FA7343" }}
+    iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #4F7FFF" }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
@@ -36,7 +36,7 @@ const ExperienceCard = ({ experience }) => (
     <div>
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
       <p
-        className="text-[#FA7343] text-[16px] font-semibold"
+        className="text-[#4F7FFF] text-[16px] font-semibold"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -62,7 +62,7 @@ const Experience = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>4+ years of shipping iOS apps</p>
         <h2 className={styles.sectionHeadText}>
-          Work Experience<span className="text-[#FA7343]">.</span>
+          Work Experience<span className="text-[#4F7FFF]">.</span>
         </h2>
       </motion.div>
 

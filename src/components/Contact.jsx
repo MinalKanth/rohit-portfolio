@@ -56,11 +56,11 @@ const Contact = () => {
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100/80 backdrop-blur-md border border-white/5 p-8 rounded-2xl shadow-[0_20px_60px_-25px_rgba(250,115,67,0.35)]"
+        className="flex-[0.75] surface p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Let's build something</p>
         <h3 className={styles.sectionHeadText}>
-          Get In Touch<span className="text-[#FA7343]">.</span>
+          Get In Touch<span className="text-accent">.</span>
         </h3>
 
         <p className="mt-4 text-secondary text-[15px]">
@@ -73,44 +73,41 @@ const Contact = () => {
           className="mt-10 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white-100 font-medium mb-3 text-[14px]">Your Name</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/5 focus:border-[#FA7343] transition-colors font-medium"
+              className="bg-black-100 py-4 px-5 placeholder:text-secondary text-white-100 rounded-xl outline-none border border-line focus:border-accent transition-colors font-medium text-[14px]"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
+            <span className="text-white-100 font-medium mb-3 text-[14px]">Your Email</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/5 focus:border-[#FA7343] transition-colors font-medium"
+              className="bg-black-100 py-4 px-5 placeholder:text-secondary text-white-100 rounded-xl outline-none border border-line focus:border-accent transition-colors font-medium text-[14px]"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="text-white-100 font-medium mb-3 text-[14px]">Your Message</span>
             <textarea
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/5 focus:border-[#FA7343] transition-colors font-medium"
+              className="bg-black-100 py-4 px-5 placeholder:text-secondary text-white-100 rounded-xl outline-none border border-line focus:border-accent transition-colors font-medium text-[14px]"
             />
           </label>
 
-          <button
-            type="submit"
-            className="bg-gradient-to-r from-[#FA7343] to-[#D65A2E] py-3 px-8 outline-none w-fit text-white font-bold rounded-xl shadow-[0_10px_30px_-10px_rgba(250,115,67,0.6)] hover:scale-[1.03] active:scale-[0.98] transition-transform"
-          >
-            {loading ? "Sending..." : "Send"}
+          <button type="submit" className="btn-premium w-fit">
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>

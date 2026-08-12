@@ -131,7 +131,7 @@ const Ball = ({ imgUrl }) => {
 
           <meshStandardMaterial
             color="#ffffff"
-            emissive="#FA7343"
+            emissive="#4F7FFF"
             emissiveIntensity={hovered ? 0.25 : 0}
             polygonOffset
             polygonOffsetFactor={-5}

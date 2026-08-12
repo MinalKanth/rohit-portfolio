@@ -12,7 +12,7 @@ const Tech = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I work with</p>
         <h2 className={styles.sectionHeadText}>
-          Tech Stack<span className="text-[#FA7343]">.</span>
+          Tech Stack<span className="text-[#4F7FFF]">.</span>
         </h2>
       </motion.div>
 
