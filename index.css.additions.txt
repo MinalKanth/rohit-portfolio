@@ -1,0 +1,55 @@
+/*
+  PASTE THIS INTO src/index.css
+  ------------------------------
+  Find the block that already defines things like .green-text-gradient,
+  .blue-text-gradient, .orange-text-gradient (near the bottom of the file,
+  under an @layer utilities or similar section) and REPLACE that whole
+  block with the one below. It keeps blue/orange (used by the new
+  constants/index.js tags) and adds a new teal gradient, all matched to
+  the new graphite + Swift-orange theme.
+*/
+
+.violet-gradient {
+  background: linear-gradient(313.66deg, #fa7343 -2.98%, #d65a2e 99.09%);
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.green-pink-gradient {
+  background: linear-gradient(90.13deg, #2dd4bf 1.9%, #fa7343 97.5%);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.orange-text-gradient {
+  background: linear-gradient(to top, #fa7343, #ffb27a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teal-text-gradient {
+  background: linear-gradient(to top, #2dd4bf, #7ff5e6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  background: linear-gradient(to top, #6fb1ff, #b6d8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
