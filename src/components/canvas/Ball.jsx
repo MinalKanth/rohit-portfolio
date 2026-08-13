@@ -338,8 +338,8 @@ const Ball = ({ imgUrl }) => {
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop="always"
-      dpr={[1, 2]}
+      frameloop="demand"
+      dpr={[1, 1.5]}
       camera={{
         position: [0, 0, 5],
         fov: 42,

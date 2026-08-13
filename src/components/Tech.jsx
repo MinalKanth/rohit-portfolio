@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,9 +7,24 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+const useIsMobile = (breakpoint = 640) => {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+};
+
 const TechCard = ({ technology, index }) => {
   const cardRef = useRef(null);
   const [hovered, setHovered] = useState(false);
+  const isMobile = useIsMobile();
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -214,8 +229,16 @@ const TechCard = ({ technology, index }) => {
                 "
               />
 
-              <div className="relative h-full w-full">
-                <BallCanvas icon={technology.icon} />
+              <div className="relative h-full w-full flex items-center justify-center">
+                {isMobile ? (
+                  <img
+                    src={technology.icon}
+                    alt={technology.name}
+                    className="h-16 w-16 object-contain"
+                  />
+                ) : (
+                  <BallCanvas icon={technology.icon} />
+                )}
               </div>
             </motion.div>
           </div>

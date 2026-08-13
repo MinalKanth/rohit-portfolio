@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
@@ -15,7 +16,18 @@ const socials = [
   { label: "Email", href: "mailto:kevatrohit63@gmail.com" },
 ];
 
-const Hero = () => {
+
+  const Hero = () => {
+  const [showComputer, setShowComputer] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    setShowComputer(mediaQuery.matches);
+    const handler = (e) => setShowComputer(e.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen mx-auto overflow-hidden">
       {/* Ambient system: fine grid + radial glow + drifting orbs */}
@@ -111,7 +123,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute inset-y-0 right-0 w-[52%] z-0 pointer-events-none">
-        <ComputersCanvas />
+        {showComputer && <ComputersCanvas />}
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
