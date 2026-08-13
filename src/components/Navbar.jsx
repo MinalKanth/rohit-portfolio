@@ -56,6 +56,7 @@ const Navbar = () => {
               : "py-5"
           }
         `}
+        style={{ paddingTop: `max(${scrolled ? "0.75rem" : "1.25rem"}, env(safe-area-inset-top))` }}
       >
         <div
           className={`

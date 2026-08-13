@@ -29,7 +29,10 @@ const socials = [
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen mx-auto overflow-hidden">
+    <section
+      className="relative w-full min-h-screen mx-auto overflow-hidden"
+      style={{ minHeight: "100svh" }}
+    >
       {/* Ambient system: fine grid + radial glow + drifting orbs */}
       <div className="pointer-events-none absolute inset-0 bg-grid" />
       <div className="pointer-events-none absolute inset-0 bg-radial-glow" />

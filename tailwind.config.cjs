@@ -31,7 +31,10 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        // Small, heavily-compressed variant loaded by default (mobile-first).
+        "hero-pattern": "url('/src/assets/herobg-mobile.webp')",
+        // Larger variant swapped in at sm:+ via the responsive class below.
+        "hero-pattern-desktop": "url('/src/assets/herobg.webp')",
         "radial-glow":
           "radial-gradient(55% 55% at 50% 35%, rgba(79,127,255,0.16) 0%, rgba(7,7,8,0) 70%)",
         "grid-lines":
