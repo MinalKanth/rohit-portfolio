@@ -33,11 +33,19 @@ const socials = [
       className="relative w-full min-h-screen mx-auto overflow-hidden"
       style={{ minHeight: "100svh" }}
     >
-      {/* Ambient system: fine grid + radial glow + drifting orbs */}
-      <div className="pointer-events-none absolute inset-0 bg-grid" />
+      {/* Ambient system: one soft static glow instead of a grid + two
+          continuously-animated blurred orbs. Pure gradients (no filter:
+          blur, no infinite transform loop) — same "cinematic" depth for
+          a fraction of the paint cost, and a lot less visual clutter. */}
       <div className="pointer-events-none absolute inset-0 bg-radial-glow" />
-      <div className="pointer-events-none absolute top-1/4 -left-32 w-[420px] h-[420px] rounded-full bg-accent/10 blur-[130px] animate-drift" />
-      <div className="pointer-events-none absolute bottom-0 -right-24 w-[380px] h-[380px] rounded-full bg-accent-violet/10 blur-[130px] animate-drift" style={{ animationDelay: "3s" }} />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(50% 45% at 78% 22%, rgba(79,127,255,0.16) 0%, rgba(7,7,8,0) 65%)",
+        }}
+      />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-primary" />
 
       <div
         className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-[115px] pb-24 flex flex-col items-start`}

@@ -95,14 +95,14 @@ const Computers = ({ isMobile }) => {
         groundColor="#000000"
       />
 
-      {/* Main premium light */}
+      {/* Main premium light — shadow map removed: it's one of the most
+          GPU-expensive things a WebGL scene can do, and on a small
+          decorative model the visual gain wasn't worth the cost. */}
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1.15}
-        castShadow
-        shadow-mapSize={1024}
       />
 
       {/* Front fill */}
@@ -162,7 +162,6 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
-      shadows
       dpr={[1, 1.5]}
       camera={{
         position: [20, 3, 5],
