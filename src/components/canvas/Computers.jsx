@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Preload,
@@ -12,6 +12,7 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   const computerRef = useRef();
+  const { invalidate } = useThree();
 
   // Mouse position across the entire browser
   const mouseX = useRef(0);
@@ -23,6 +24,12 @@ const Computers = ({ isMobile }) => {
     const handleMouseMove = (event) => {
       mouseX.current = (event.clientX / window.innerWidth) * 2 - 1;
       mouseY.current = (event.clientY / window.innerHeight) * 2 - 1;
+      // The Canvas uses frameloop="demand" for performance, which only
+      // re-renders on explicit invalidation. Since this listener is on
+      // `window` rather than wired through R3F's own event system, we
+      // have to manually request a frame here or the model never redraws
+      // in response to the mouse.
+      invalidate();
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -30,7 +37,7 @@ const Computers = ({ isMobile }) => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [isMobile]);
+  }, [isMobile, invalidate]);
 
   useFrame((state) => {
     if (!computerRef.current || isMobile) return;

@@ -125,7 +125,7 @@ const socials = [
         </motion.div>
       </div>
 
-      <div className="absolute inset-y-0 right-0 w-[52%] z-0 pointer-events-none">
+      <div className="absolute inset-y-0 right-0 w-[52%] z-0">
         {showComputer && <ComputersCanvas />}
       </div>
 
