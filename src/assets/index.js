@@ -29,7 +29,7 @@ import cloudkit from "./tech/cloudkit.png";
 // Company Icons
 // =====================================================
 
-const anytime = "/src/assets/tech/anytime.png";
+const anytime = "/src/assets/tech/Anytime.webp";
 const viprak = "/src/assets/tech/viprak.png";
 const xitij = "/src/assets/tech/xitij.png";
 
@@ -37,17 +37,17 @@ const xitij = "/src/assets/tech/xitij.png";
 // App Store Screenshots
 // =====================================================
 
-const anytimeClinician = "/src/assets/anytime-clinician.png";
-const anytimePediatrics = "/src/assets/anytime-pediatrics.png";
-const aiScanner = "/src/assets/ai-scanner.png";
-const aiArt = "/src/assets/ai-art.png";
-const testerVse = "/src/assets/tester-vse.png";
-const communityConnect = "/src/assets/community-connect.png";
-const hypnobirthing = "/src/assets/hypnobirthing.png";
-const loloLive = "/src/assets/lolo-live.png";
-const reelster = "/src/assets/reelster.png";
-const ttyo = "/src/assets/ttyo.png";
-const buzzy = "/src/assets/buzzy.png";
+const anytimeClinician = "/src/assets/projects/anytime-clinician.png";
+const anytimePediatrics = "/src/assets/projects/anytime-pediatrics.png";
+const aiScanner = "/src/assets/projects/Lense Ai.webp";
+const aiArt = "/src/assets/projects/Pinct Ai.png";
+const testerVse = "/src/assets/projects/tester-vse.png";
+const communityConnect = "/src/assets/projects/Community connect.png";
+const hypnobirthing = "/src/assets/projects/Hypno.webp";
+const loloLive = "/src/assets/projects/lolo-live.png";
+const reelster = "/src/assets/projects/Reelster.jpg";
+const ttyo = "/src/assets/projects/ttyo.png";
+const buzzy = "/src/assets/projects/buzzy.png";
 
 // =====================================================
 // Exports

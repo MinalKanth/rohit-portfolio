@@ -95,11 +95,13 @@ const ExperienceCard = ({ experience, index }) => {
           {/* Icon glow */}
           <div className="absolute inset-1 rounded-full bg-[#4F7FFF]/10 blur-md" />
 
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="relative w-[60%] h-[60%] object-contain rounded-full"
-          />
+          <div className="relative w-[88%] h-[88%] rounded-full bg-white flex items-center justify-center p-1">
+            <img
+              src={experience.icon}
+              alt={experience.company_name}
+              className="w-[92%] h-[92%] object-contain rounded-full overflow-hidden"
+            />
+          </div>
         </motion.div>
       }
     >
