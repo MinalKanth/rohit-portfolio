@@ -11,8 +11,8 @@ const stats = [
 ];
 
 const socials = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "GitHub", href: "https://github.com/Rohit-iOS-Developer" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-kevat-09431518a" },
   { label: "Email", href: "mailto:kevatrohit63@gmail.com" },
 ];
 

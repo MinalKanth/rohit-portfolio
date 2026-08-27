@@ -26,7 +26,7 @@ const Footer = () => {
   const socials = [
     {
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/Rohit-iOS-Developer",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ const Footer = () => {
     },
     {
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/rohit-kevat-09431518a",
       icon: (
         <svg
           viewBox="0 0 24 24"

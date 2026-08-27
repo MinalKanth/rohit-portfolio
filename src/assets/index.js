@@ -37,17 +37,17 @@ const xitij = "/src/assets/tech/xitij.png";
 // App Store Screenshots
 // =====================================================
 
-const anytimeClinician = "/src/assets/projects/anytime-clinician.png";
-const anytimePediatrics = "/src/assets/projects/anytime-pediatrics.png";
+const anytimeClinician = "/src/assets/projects/anytimeClinician.png";
+const anytimePediatrics = "/src/assets/projects/anytimePediatrics.png";
 const aiScanner = "/src/assets/projects/Lense Ai.webp";
 const aiArt = "/src/assets/projects/Pinct Ai.png";
-const testerVse = "/src/assets/projects/tester-vse.png";
+const testerVse = "/src/assets/projects/testerVse.webp";
 const communityConnect = "/src/assets/projects/Community connect.png";
 const hypnobirthing = "/src/assets/projects/Hypno.webp";
-const loloLive = "/src/assets/projects/lolo-live.png";
+const loloLive = "/src/assets/projects/default.jpeg";
 const reelster = "/src/assets/projects/Reelster.jpg";
-const ttyo = "/src/assets/projects/ttyo.png";
-const buzzy = "/src/assets/projects/buzzy.png";
+const ttyo = "/src/assets/projects/default.jpeg";
+const buzzy = "/src/assets/projects/buzzy.jpg";
 
 // =====================================================
 // Exports

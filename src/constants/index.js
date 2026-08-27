@@ -133,10 +133,10 @@ const projects = [
     ],
     image: anytimePediatrics,
     source_code_link:
-      "https://apps.apple.com/us/app/anytime-pediatrics/id1369375768",
+      "https://apps.apple.com/us/app/anytime-telecare/id1369375768",
   },
   {
-    name: "AI Scanner: Identify Anything",
+    name: "Lense Ai",
     description:
       "Tap-and-hold object identification powered by AI APIs, with a suite of additional AI-driven utilities.",
     tags: [
@@ -145,10 +145,10 @@ const projects = [
     ],
     image: aiScanner,
     source_code_link:
-      "https://apps.apple.com/in/app/ai-scanner-identify-anything/id6501988364",
+      "https://apps.apple.com/us/app/lens-ai-scan-image-search/id6501988364",
   },
   {
-    name: "AI Art & AI Photo Generator",
+    name: "Cartoon yourself AI Photo Pict",
     description:
       "Text-to-image AI generation across multiple themes and aspect ratios, with Core Data favourites and Firebase-served prompts.",
     tags: [
@@ -157,7 +157,7 @@ const projects = [
     ],
     image: aiArt,
     source_code_link:
-      "https://apps.apple.com/in/app/ai-art-ai-photo-generator/id6471817347",
+      "https://apps.apple.com/in/app/cartoon-yourself-ai-photo-pict/id6471817347",
   },
   {
     name: "Tester VŠE",
@@ -183,7 +183,7 @@ const projects = [
       "https://apps.apple.com/us/app/community-connect-solutions/id1642508322",
   },
   {
-    name: "A Hypnobirthing Pregnancy App",
+    name: "A Hypnobirthing: Zen Pregnancy",
     description:
       "Meditation and relaxation app for expectant mothers with CloudKit sync, RevenueCat subscriptions, and AVFoundation audio/video.",
     tags: [
@@ -192,7 +192,7 @@ const projects = [
     ],
     image: hypnobirthing,
     source_code_link:
-      "https://apps.apple.com/us/app/a-hypnobirthing-pregnancy-app/id1489680692",
+      "https://apps.apple.com/in/app/a-hypnobirthing-zen-pregnancy/id1489680692",
   },
   {
     name: "Lolo Live",
