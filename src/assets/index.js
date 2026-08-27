@@ -29,7 +29,7 @@ import cloudkit from "./tech/cloudkit.png";
 // Company Icons
 // =====================================================
 
-const anytime = "/src/assets/tech/Anytime.webp";
+const anytime = "/src/assets/tech/anytime.webp";
 const viprak = "/src/assets/tech/viprak.png";
 const xitij = "/src/assets/tech/xitij.png";
 
